@@ -1,0 +1,235 @@
+/* najaun francis
+2304842
+IA#2 */
+
+/* incase I need to mess with font size */
+html {
+    font-size: 16px;
+}
+body {
+    background-color: rgb(216, 216, 216);
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+/* background */
+body {
+    background-image:
+        url(/assets/images/pattern-lines.svg),
+        url(/assets/images/pattern-squiggly-line-top.svg),
+        url("/assets/images/pattern-squiggly-line-bottom-desktop.svg"),
+        url("/assets/images/background-desktop.png");
+    background-repeat: 
+        no-repeat, 
+        no-repeat, 
+        no-repeat, 
+        no-repeat;
+    background-position: 
+        center top -11rem,
+        top 4rem right,
+        left  bottom, 
+        center top;
+    
+}
+@media (max-width:375px) {
+    body {
+        background-image:
+            url(/assets/images/pattern-lines.svg),
+            url(/assets/images/pattern-squiggly-line-top.svg),
+            url("/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
+            url(/assets/images/background-mobile.png);
+        background-repeat:
+            no-repeat,
+            no-repeat,
+            no-repeat,
+            no-repeat;
+        background-position: 
+            center top,
+            top .8rem right,
+            left bottom,
+            center top;
+        background-size:
+            auto,
+            18rem auto,
+            18rem auto, 
+            cover;
+    }
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-family: "Inconsolata", monospace;
+    font-weight: 400;
+    
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90vw;
+    margin: 0;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* form styling */
+.form-container{
+    text-align: left;
+    max-width: 100%;
+}
+
+label {
+    color: white;
+    font-family: Fredoka;
+    font-size: .8rem;
+}
+.form-container span {
+    color: white;
+    font-family: Fredoka;
+    font-size: .8rem;
+}
+
+.avatar-box {
+    box-sizing: border-box;
+    min-height: 6rem;
+    border: 1px dashed white;
+    border-radius: .5rem;
+    background-color: rgba(255, 255, 255, 0.20);
+    margin-bottom: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* this hides the insert file thing */
+.avatar-input {
+    clip-path: inset(50%);
+}
+
+/*field styling*/
+input[type="text"]{
+    margin-bottom: .5rem;
+    box-sizing: border-box;
+    width:100%;
+    min-height: 2rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, .20);
+    color: white;
+}
+/*Submit button styling*/
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.7rem;
+    background-color: #F17267;
+    color: #080134;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* font stylings */
+h1 {
+    color: white;
+    font-weight: 800;
+
+}
+h2 {
+    color: #b5b0c4;
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+
+/* STYLINGS FOR TICKET SCREEN */
+.ticket-container {
+    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background-image: url("../assets/images/pattern-ticket.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* border: 2px solid red ; */
+    width: 20.5rem;
+    aspect-ratio: 15 / 7;
+    max-width: 90vw;
+    
+}
+.ticket-info-container {
+    /* color: white; */
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+}
+.ticket-logo {
+    /* border: 2px solid white; */
+    padding:1rem;
+}
+.attendee-data {
+    padding: .5rem;
+    display: flex;
+    margin-top: auto;
+    /* border: 2px solid red; */
+}
+.attendee-name, .attendee-email, .attendee-git{
+    color: white;
+    /* border: 2px solid white; */
+}
+.avatar{
+    /* border: 2px solid white; */
+    overflow:hidden;
+    border-radius: .5rem;
+    height: 40px;
+    width: 40px;
+    padding-right: 1rem;
+}
+.avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ticket-number {
+    display: flex;
+    align-items: center;
+    /* border: 2px solid white; */
+    width: 60px;
+    text-align: center;
+}
+.ticket-number h3{
+    margin: 0;
+    transform: rotate(-90deg);
+    color: #b5b0c4;
+}
+.attendee-git{
+    font-size: .8rem;
+    color: #b5b0c4;
+    padding-top: .3rem;
+}
+.attendee-git img {
+    size: 20px;
+}
+#fullName {
+    background: -webkit-linear-gradient(#eee, #e01717);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#email {
+    color: rgb(230, 91, 91);
+}
