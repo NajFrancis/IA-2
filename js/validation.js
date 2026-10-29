@@ -6,8 +6,8 @@ registrationForm.addEventListener("submit",handleForm);
 
 
 //event handler for form
-function handleForm(event) {
-    event.preventDefault();
+function handleForm(e) {
+    e.preventDefault();
     console.log("Submitted Form...");
 
     const attendee = createTicket();
